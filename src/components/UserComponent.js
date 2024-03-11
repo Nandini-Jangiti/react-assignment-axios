@@ -9,7 +9,7 @@ const client = axios.create({
 });
 
 const UserComponent = () => {
-  const [username, setUsername] = useState('');
+  const [firstname, setFirstname] = useState('');
   const [email, setEmail] = useState('');
   const [users, setUsers] = useState(usersData.users);
   const [editUserId, setEditUserId] = useState(null);
@@ -41,11 +41,11 @@ const UserComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editUserId !== null) {
-      await updateUser(editUserId, { username, email });
+      await updateUser(editUserId, { firstname, email });
     } else {
-      await addUser({ username, email });
+      await addUser({ firstname, email });
     }
-    setUsername('');
+    setFirstname('');
     setEmail('');
     setEditUserId(null);
   };
@@ -72,7 +72,7 @@ const UserComponent = () => {
   };
 
   const editUser = (user) => {
-    setUsername(user.username);
+    setFirstname(user.firstname);
     setEmail(user.email);
     setEditUserId(user.id);
   };
@@ -80,15 +80,15 @@ const UserComponent = () => {
   return (
     <div className="app">
       <nav>
-        <h1>USERS APP</h1>
+        <h1>USERS DETAILS</h1>
       </nav>
       <div className="add-user-container">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={firstname}
+            onChange={(e) => setFirstname(e.target.value)}
           />
           <input
             type="email"
@@ -103,7 +103,7 @@ const UserComponent = () => {
         <h2>All Users</h2>
         {users.map((user) => (
           <div className="user-card" key={user.id}>
-            <h2 className="user-username">{user.username}</h2>
+            <h2 className="user-username">{user.firstname}</h2>
             <p className="user-email">{user.email}</p>
             <div className="button">
               <div className="edit-btn" onClick={() => editUser(user)}>
