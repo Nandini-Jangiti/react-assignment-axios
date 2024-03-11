@@ -1,12 +1,16 @@
-[
-    {
-        "id": 1,
-        "name": "Nandini",
-        "email": "Nandini@gmail.com"
-    },
-    {
-        "id": 2,
-        "name": "Jyothi ",
-        "email": "jyo@gmail.com"
-    }
-]
+{
+    "users": [
+        {
+            "username": "Jangiti",
+            "email": "jangiti12@gmail.com"
+        },
+        {
+            "username": "Nandini",
+            "email": "nandini@gmail.com"
+        },
+        {
+            "username": "krishna",
+            "email": "krishna@gmail.com"
+        }
+    ]
+}

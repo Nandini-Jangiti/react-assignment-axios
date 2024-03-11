@@ -1,0 +1,82 @@
+.app {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-user-container {
+    margin-bottom: 20px;
+}
+
+.add-user-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-user-container input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.add-user-container button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.add-user-container button:hover {
+    background-color: #0056b3;
+}
+
+.users-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.users-container h2 {
+    margin-bottom: 10px;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user-card .user-username {
+    margin: 0;
+}
+
+.user-card .button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-card .button>div {
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.user-card .button .edit-btn {
+    background-color: #ffc107;
+}
+
+.user-card .button .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.user-card .button>div:hover {
+    opacity: 0.8;
+}
